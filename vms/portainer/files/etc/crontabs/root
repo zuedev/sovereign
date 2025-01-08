@@ -1,0 +1,7 @@
+0 * * * * docker system prune --all --volumes --force
+
+@reboot cd /portainer && docker compose up -d
+
+15 0 * * * /portainer/scripts/galactic-armory-sync.sh
+
+@reboot modprobe fuse && rclone mount --daemon --vfs-fast-fingerprint --vfs-cache-mode full --no-modtime sovereign-portainer-mount:sovereign-portainer-mount /sovereign-portainer-mount
