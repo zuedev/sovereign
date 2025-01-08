@@ -1,0 +1,59 @@
+{
+    email certs@sovereign.zue.dev
+}
+
+https://sovereign.zue.dev {
+    reverse_proxy https://100.123.155.44 {
+        transport http {
+            tls_insecure_skip_verify
+        }
+    }
+}
+
+https://zuedev-foundry-the-travellers.sovereign.zue.dev {
+    reverse_proxy http://localhost:53222
+}
+
+https://foundry-pizzaold-dnd5e.sovereign.zue.dev {
+    reverse_proxy http://localhost:43322
+}
+
+https://foundry-hanz-cpr-2.sovereign.zue.dev {
+    reverse_proxy http://localhost:43331
+}
+
+https://collin-foundry.sovereign.zue.dev {
+    reverse_proxy http://localhost:53883
+}
+
+https://pterodactyl-panel.sovereign.zue.dev {
+    reverse_proxy http://100.72.142.61
+}
+
+https://lobechat.sovereign.zue.dev {
+    reverse_proxy http://localhost:3210
+}
+
+https://portainer.sovereign.zue.dev {
+    reverse_proxy https://localhost:9443 {
+        transport http {
+            tls_insecure_skip_verify
+        }
+    }
+}
+
+https://portainer-tunnel.sovereign.zue.dev {
+	reverse_proxy http://localhost:8000
+}
+
+https://git.zue.dev {
+	reverse_proxy http://localhost:4773
+}
+
+https://todo.area96.digital {
+	reverse_proxy http://localhost:31222
+}
+
+https://romm.sovereign.zue.dev {
+	reverse_proxy http://localhost:32211
+}
