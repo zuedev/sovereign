@@ -3,7 +3,7 @@
 }
 
 https://sovereign.zue.dev {
-    reverse_proxy https://100.123.155.44 {
+    reverse_proxy https://100.103.157.31 {
         transport http {
             tls_insecure_skip_verify
         }
