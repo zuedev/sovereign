@@ -3,11 +3,27 @@
 }
 
 https://sovereign.zue.dev {
+    respond "who you be?!"
+}
+
+https://unraid.sovereign.zue.dev {
     reverse_proxy https://100.103.157.31 {
         transport http {
             tls_insecure_skip_verify
         }
     }
+}
+
+https://portainer.sovereign.zue.dev {
+    reverse_proxy https://localhost:9443 {
+        transport http {
+            tls_insecure_skip_verify
+        }
+    }
+}
+
+https://portainer-tunnel.sovereign.zue.dev {
+	reverse_proxy http://localhost:8000
 }
 
 https://zuedev-foundry-the-travellers.sovereign.zue.dev {
@@ -26,24 +42,8 @@ https://collin-foundry.sovereign.zue.dev {
     reverse_proxy http://localhost:53883
 }
 
-https://pterodactyl-panel.sovereign.zue.dev {
-    reverse_proxy http://100.72.142.61
-}
-
 https://lobechat.sovereign.zue.dev {
     reverse_proxy http://localhost:3210
-}
-
-https://portainer.sovereign.zue.dev {
-    reverse_proxy https://localhost:9443 {
-        transport http {
-            tls_insecure_skip_verify
-        }
-    }
-}
-
-https://portainer-tunnel.sovereign.zue.dev {
-	reverse_proxy http://localhost:8000
 }
 
 https://git.zue.dev {
