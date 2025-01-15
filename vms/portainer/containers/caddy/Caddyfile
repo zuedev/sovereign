@@ -3,7 +3,7 @@
 }
 
 https://sovereign.zue.dev {
-    respond "who you be?!"
+    file_browser browse
 }
 
 https://unraid.sovereign.zue.dev {
@@ -48,12 +48,4 @@ https://lobechat.sovereign.zue.dev {
 
 https://git.zue.dev {
 	reverse_proxy http://localhost:4773
-}
-
-https://todo.area96.digital {
-	reverse_proxy http://localhost:31222
-}
-
-https://romm.sovereign.zue.dev {
-	reverse_proxy http://localhost:32211
 }
