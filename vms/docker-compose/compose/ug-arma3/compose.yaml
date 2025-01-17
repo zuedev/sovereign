@@ -1,0 +1,21 @@
+services:
+  vanilla:
+    image: ghcr.io/brettmayson/arma3server/arma3server:latest
+    restart: unless-stopped
+    user: root
+    ports:
+      - '2302:2302/udp'
+      - '2303:2303/udp'
+      - '2304:2304/udp'
+      - '2305:2305/udp'
+      - '2306:2306/udp'
+    volumes:
+      - './volumes/vanilla/missions:/arma3/mpmissions'
+      - './volumes/vanilla/configs:/arma3/configs'
+      - './volumes/vanilla/mods:/arma3/mods'
+      - './volumes/vanilla/servermods:/arma3/servermods'
+    env_file: .env
+    environment:
+      STEAM_BRANCH: profiling
+      ARMA_BINARY: "./arma3serverprofiling_x64"
+      ARMA_PARAMS: "-enableHT -hugepages -nologs -exthreads=7 -maxmem=8192 -autoinit -loadmissiontomemory"
